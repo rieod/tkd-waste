@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import PrivateRoute from './utils/PrivateRoute'
 import { AuthProvider } from './context/AuthContext'
 
@@ -16,6 +16,12 @@ function App() {
     <Router>
       <AuthProvider>
         <Navbar />
+        <Routes>
+          <Route>
+            <Route element={<PrivateRoute><Dashboard/></PrivateRoute>} path='/dashboard' exact />
+            <Route element={<Loginpage/>} path='/login'/>
+          </Route>
+        </Routes>
       </AuthProvider>
     </Router>
   );

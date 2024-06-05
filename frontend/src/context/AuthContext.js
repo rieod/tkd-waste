@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
-import {createContext, useState, useEffect} from "react";
+import {createContext, useState, useEffect} from 'react'
 import {jwtDecode as jwt_decode} from 'jwt-decode'
-import {useNavigate} from "react-router-dom";
+import {useNavigate} from 'react-router-dom'
 const swal = require('sweetalert2')
 
 const AuthContext = createContext();
