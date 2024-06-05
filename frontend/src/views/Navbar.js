@@ -1,5 +1,6 @@
 import React from 'react'
 
+import LogoImage from '../image/logo.png'
 
 import {useContext} from 'react'
 import {jwtDecode as jwt_decode} from 'jwt-decode'
@@ -21,7 +22,7 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            <img style={{width:"120px", padding:"6px"}} src="https://i.imgur.com/juL1aAc.png" alt="" />
+            <img style={{width:"120px", padding:"6px"}} src={LogoImage} alt="" />
 
           </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +31,7 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <a className="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               {token === null && 
               <>

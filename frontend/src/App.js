@@ -20,6 +20,8 @@ function App() {
           <Route>
             <Route element={<PrivateRoute><Dashboard/></PrivateRoute>} path='/dashboard' exact />
             <Route element={<Loginpage/>} path='/login'/>
+            <Route element={<Registerpage/>} path='/register' exact/>
+            <Route element={<Homepage/>} path='/' exact />
           </Route>
         </Routes>
       </AuthProvider>
